@@ -70,10 +70,8 @@ namespace OsEngine.Market.Servers.OKX
             {
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls |
                     SecurityProtocolType.Tls11 |
-                    SecurityProtocolType.Tls12 |
-                    SecurityProtocolType.Tls13 |
-                    SecurityProtocolType.Ssl3 |
-                    SecurityProtocolType.SystemDefault;
+                    SecurityProtocolType.Tls12 | 
+                    SecurityProtocolType.Ssl3 ;
 
                 
                 var response = _httpPublicClient.GetAsync(_baseUrl + "api/v5/public/time").Result;
